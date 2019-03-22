@@ -14,7 +14,8 @@ var estado_inicial = {
                     stocked: true,
                     name: "iPod Touch"
                 }
-            ]
+            ],
+            formularioAgregarVisible: 'No'
         };
 
 export const productos = (state = estado_inicial, Action) => {
