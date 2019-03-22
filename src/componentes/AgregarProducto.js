@@ -46,8 +46,10 @@ class AgregarProducto extends Component {
     render() {
 
     return (
-      <React.Fragment>
-            <h1>Agregar productos</h1>
+      <div className='table-dark' align='center'>
+            <br />
+            <h3>Agregar productos</h3>
+            <br />
             <table>
                 <tbody>
                     <tr>
@@ -74,12 +76,13 @@ class AgregarProducto extends Component {
                     <tr>
                         <td align="center">
                             <br />
-                            <input name="" ref={this.botonAgregar} className="btn btn-primary" type="button" value="Agregar" onClick={this.agregarProducto}/>
+                            <input name="" ref={this.botonAgregar} className="btn btn-light" type="button" value="Agregar" onClick={this.agregarProducto}/>
                         </td>
                     </tr>
                 </tbody>
             </table>
-      </React.Fragment>
+            <br />
+      </div>
     );
   }
 }

@@ -12,7 +12,7 @@ export const agregarProducto = (producto) => ({
 })
 
 export const agregarProductoState = (dispatch, producto) => {
-    console.log(producto);
+    //console.log(producto);
     dispatch(agregarProducto(producto));
 }
 
