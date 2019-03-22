@@ -6,14 +6,18 @@ export const cargarProductos = (productos) => ({
     payload: productos
 })
   
-export const agregarProducto = (producto) => ({
+export const agregarProducto = (producto) => {
+
+  return ({
     type: Acciones.AGREGAR_PRODUCTO,
     payload: producto
-})
+  })
+}
 
-export const agregarProductoState = (dispatch, producto) => {
-    //console.log(producto);
-    dispatch(agregarProducto(producto));
+export const agregarProductoState = (producto) => {
+    return (dispatch) => {
+      dispatch(agregarProducto(producto));
+    }
 }
 
 export const cargarProductosServicio = (dispatch) => {

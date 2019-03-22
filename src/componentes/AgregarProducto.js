@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
-import * as Acciones from '../redux/tipoAcciones'
+//import * as Acciones from '../redux/tipoAcciones'
 
 import { agregarProductoState } from '../redux/productosAcciones';
 
@@ -11,7 +11,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
-    agregarProductoState: () => dispatch(agregarProductoState)
+    agregarProductoState: (producto) => dispatch(agregarProductoState(producto))
 })
 
 class AgregarProducto extends Component {
@@ -35,11 +35,10 @@ class AgregarProducto extends Component {
             name: this.inputNombre.value
         }
         //console.log(this.inputNombre.value + this.inputCategoria.value + this.inputPrecio.value);
-        console.log(nuevoProducto);
-        this.props.agregarProductoState({
-            type: Acciones.AGREGAR_PRODUCTO,
-            payload: nuevoProducto
-        })
+        //console.log(nuevoProducto);
+        this.props.agregarProductoState(
+            nuevoProducto
+        )
     }
 
 
